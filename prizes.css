@@ -21,7 +21,7 @@ a {
     transition: ease 0.5sec;
     margin-left: 60%;
 }
-a:hover {
+a:hover {      
     background-color: blue;
     color: red;
 }
