@@ -1,0 +1,99 @@
+*<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ Questions</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <div class="subcontainer">
+            <a href="index.html">HOME</a>
+            <a href="index3.html">PRIZES</a>
+        </div>
+        <div id="countdown" class="countdown">
+            <span>Total Time: <br> ()</span>
+        </div>
+        <div class="container">
+            <div>
+                <p>Q1. One of the following is not a family trait.</p> <br>
+                <input type="radio" name="question1"> a.) Complex of the skin.
+                <input type="radio" name="question1"> b.) Albinism. 
+                <input type="radio" name="question1"> c.) Height. 
+                <input type="radio" name="question1" id="correct1"> d.) Possession of two eyes. <br><br><br>
+            </div>
+            <div>
+                <p>Q2. The following can cause soil erosion except?</p>
+                <input type="radio" name="question2"> a.) Building of houses. 
+                <input type="radio" name="question2"> b.) Growth of towns. 
+                <input type="radio" name="question2" id="correct2"> c.) Bush burning. 
+                <input type="radio" name="question2"> d.) Road construction. <br><br><br>
+            </div>
+            <div>
+                <p>Q3. In shorthand , words are written accordingto their....?</p> 
+                <input type="radio" name="question3" id="correct3"> a.) Signs. 
+                <input type="radio" name="question3"> b.) Sounds.
+                <input type="radio" name="question3"> c.) Spelling. 
+                <input type="radio" name="question3"> d.) Meaning. <br><br><br>
+            </div>
+            <div>
+                <p>Q4. The story that has two meanings is called ?</p>
+                <input type="radio" name="question4"> a.) A Fable. 
+                <input type="radio" name="question4"> b.) An Epie.
+                <input type="radio" name="question4" id="correct4"> c.) An Allegory. 
+                <input type="radio" name="question4"> d.) A Dance Drama. <br><br><br>
+            </div>
+            <div>
+                <p>Q5. A fair six-sided die is thrown. Find the probability of getting an Even number.</p> 
+                <input type="radio" name="question5"> a.) 2/3. 
+                <input type="radio" name="question5" id="correct5"> b.) 1/2. 
+                <input type="radio" name="question5"> c.) 1/6.
+                <input type="radio" name="question5"> d.) 1/3. <br><br>
+            </div>
+        </div>
+        <div>
+            <button type="submit" value="submit" id="submit" onclick="result()">SUBMIT QUIZ</button>
+        </div>
+    </header>
+<script type="text/javascript">
+    const startingMinutes = 5;
+    let time = startingMinutes * 60;
+
+    const countdownEl = document.getElementById('countdown');
+
+    setInterval(updateCountdown, 1000);
+
+    function updateCountdown() {
+        const minutes = Math.floor(time / 60);
+        let seconds = time % 60;
+
+        seconds = seconds < 5 ? '0' + seconds : seconds;
+
+
+        countdownEl.innerHTML = `${minutes}: ${seconds}`;
+        time--;
+    }
+function result() {
+    var score=0;
+    if (document.getElementById('correct1').checked) {
+        score++;
+    }
+    if (document.getElementById('correct2').checked) {
+        score++;
+    }
+    if (document.getElementById('correct3').checked) {
+        score++;
+    }
+    if (document.getElementById('correct4').checked) {
+        score++;
+    }
+    if (document.getElementById('correct5').checked) {
+        score++;
+    }
+    document.write("Your score is:"+score)
+}
+</script>
+</body>
+</html>

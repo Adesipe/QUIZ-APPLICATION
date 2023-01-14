@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: green;
+    font-size: 30px;
+}
+.container {
+    text-align: center;
+    margin-top: 50%;
+    padding: 15px;
+    background-color: lightgreen;
+}
+.button-start {
+    border: 3px solid;
+    border-color: white;
+}
+.button-stop {
+    border: 3px solid;
+    border-color: white;
+}
+.button-reset {
+    border: 3px solid;
+    border-color: white;
+}
